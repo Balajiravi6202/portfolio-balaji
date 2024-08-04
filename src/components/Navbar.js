@@ -54,7 +54,7 @@ const Navbar = () => {
           <div
             className="w-22 h-100 ml-10 cursor-pointer scale-125 lg:scale-150 lg:ml-10"
            
-            alt="Vijay"
+            alt="Balaji"
           >My Portfolio</div>
         </Link>
         <nav

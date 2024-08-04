@@ -1,7 +1,19 @@
 import React from "react";
-import { Link } from "react-scroll";
+
 
 const About = () => {
+
+  const handleDownload = () => {
+ 
+    const pdfUrl = './BALAJI RESUME.pdf ';
+   
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'Balaji,R_Resume.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section className="body-font">
       <div className="p-5 mt-3 mx-auto md:mt-5 md:mx-10 lg:mx-16">
@@ -38,16 +50,11 @@ const About = () => {
               data-aos-once="false"
               className="font-medium text-gray-700 text-lg lg:text-base xl:text-xl leading-loose xl:leading-8"
             >
-              A passionate and dedicated web developer with a strong background
-              in creating visually stunning and highly functional websites with
-              2 years of experience in the field. <br />
-              <br /> Throughout my career, I have developed proficiency in
-              various web technologies including HTML5 , CSS3 , JavaScript. I am
-              well-versed in popular libraries such as React and frameworks like
-              Next ,Tailwind allowing me to build robust and responsive
-              websites. <br /> <br /> I'm excited to take on new challenges and
-              contribute to innovative projects. Feel free to connect with me
-              through my social media links.
+              I’m a dedicated software developer with  1 years of experience crafting scalable and efficient web applications.
+               My expertise spans JavaScript, React, and Node.js, Express Js , MySql <br />
+              <br /> My strong technical skills and experience in delivering high-quality solutions make me a valuable asset. <br /> <br /> 
+              I excel at working collaboratively with cross-functional teams to turn complex challenges into successful outcomes. 
+              My commitment to continuous learning and adapting ensures that I stay ahead of industry trends and bring the latest best practices to every project
             </p>
             <div
               data-aos="zoom-in"
@@ -55,26 +62,12 @@ const About = () => {
               data-aos-once="false"
               className="mt-7 flex gap-x-4 md:gap-x-5 justify-center md:justify-between"
             >
-              <button className="inline-flex font-medium text-white bg-black border-2 border-black py-3 px-7 focus:outline-none hover:bg-cornsilk hover:border-dark-orange hover:text-black rounded-full text-md xl:px-10">
-                <Link
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                >
-                  Hire Me
-                </Link>
-              </button>
-              <a
-                href="https://drive.google.com/drive/u/1/folders/1VLbE3u0gC3x66ClPWCUmcK75DuhTAyKx"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="inline-flex font-medium text-white bg-dark-orange border-2 border-dark-orange py-3 px-7 focus:outline-none hover:bg-cornsilk hover:border-dark-orange hover:text-black rounded-full text-md xl:px-10">
+             
+            
+                <button className="inline-flex font-medium text-white bg-dark-orange border-2 border-dark-orange py-3 px-7 focus:outline-none hover:bg-cornsilk hover:border-dark-orange hover:text-black rounded-full text-md xl:px-10" onClick={handleDownload}>
                   Get Resume
                 </button>
-              </a>
+            
             </div>
           </div>
         </div>

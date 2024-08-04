@@ -3,7 +3,21 @@ import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 import SocialHandles from "./SocialHandles";
 
+
 const Profile = () => {
+
+  const handleDownload = () => {
+ 
+    const pdfUrl = './BALAJI RESUME.pdf ';
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'Balaji,R_Resume.pdf'; 
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+
   return (
     <section className="text-gray-600 body-font pt-16 lg:min-h-75vh">
       <div className="p-5 mx-auto gap-2 flex flex-col md:pt-12 md:px-7 lg:py-20 lg:flex-row-reverse items-center min-h-fit">
@@ -15,7 +29,7 @@ const Profile = () => {
         >
           <img
             className="object-cover object-center bg-[#b9aeb6] border-2 border-white pointer-events-none rounded-full backdrop-contrast-200 backdrop-brightness-200"
-            alt="Vijay"
+            alt="Balaji"
             src={require("../assets/Images/hero.png")}
           />
         </div>
@@ -37,7 +51,7 @@ const Profile = () => {
           >
             &nbsp;
             <Typewriter
-              words={["Web Developer", "UI UX - Designer", "Mern Developer"]}
+              words={["Web Developer", "UI UX - Designer", "MERN Stack Developer"]}
               loop={false}
               typeSpeed={100}
               deleteSpeed={100}
@@ -77,15 +91,11 @@ const Profile = () => {
                 Hire Me
               </Link>
             </button>
-            <a
-              href="https://drive.google.com/drive/u/1/folders/1VLbE3u0gC3x66ClPWCUmcK75DuhTAyKx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="inline-flex font-medium text-white bg-dark-orange border-2 border-dark-orange py-3 px-7 focus:outline-none hover:bg-cornsilk hover:border-dark-orange hover:text-black rounded-full text-md xl:px-10">
+    
+              <button className="inline-flex font-medium text-white bg-dark-orange border-2 border-dark-orange py-3 px-7 focus:outline-none hover:bg-cornsilk hover:border-dark-orange hover:text-black rounded-full text-md xl:px-10" onClick={handleDownload}>
                 Get Resume
               </button>
-            </a>
+            
           </div>
         </div>
       </div>

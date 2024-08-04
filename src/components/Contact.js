@@ -46,7 +46,7 @@ const Contact = () => {
             </div>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false" className="flex gap-3 items-center mb-4 md:gap-2 lg:gap-5">
               <FaEnvelope className="text-white" />
-              <a href="mailto:talakolavijaykumar@gmail.com" className="text-white md:text-lg">balajiravi0510@gmail.com</a>
+              <a href="mailto:balajiravi0510@gmail.com" className="text-white md:text-lg">balajiravi0510@gmail.com</a>
             </div>
             <div data-aos="fade-right" data-aos-duration="1000" data-aos-once="false" className="flex gap-3 items-center md:gap-2 lg:gap-5">
               <FaMapMarkerAlt className="text-white" />

@@ -1,6 +1,6 @@
 import React from 'react'
-import { FaDiscord, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import {  FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+
 
 const SocialHandles = () => {
   return (
@@ -8,18 +8,14 @@ const SocialHandles = () => {
         <a className="text-white text-2xl md:text-xl transition duration-700 hover:scale-125" href="https://github.com/Balajiravi6202" target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
-        <a className="text-white text-2xl md:text-xl transition duration-700 hover:scale-125" href="https://www.linkedin.com/in/talakola-vijay-kumar-reddy-1b5028231/" target="_blank" rel="noreferrer">
+        <a className="text-white text-2xl md:text-xl transition duration-700 hover:scale-125" href="https://www.linkedin.com/in/balaji-r-620216r" target="_blank" rel="noreferrer">
           <FaLinkedin />
         </a>
-        <a className="text-white text-2xl md:text-xl transition duration-700 hover:scale-125" href="https://discordapp.com/users/talakolavijay" rel="noreferrer" target="_blank">
-          <FaDiscord />
-        </a>
+        
         <a className="text-white text-2xl md:text-xl transition duration-700 hover:scale-125" href="https://www.instagram.com/trending_balaji_06/" target="_blank" rel="noreferrer">
           <FaInstagram />
         </a>
-        <a className="text-white text-2xl md:text-xl transition duration-700 hover:scale-125" href="https://twitter.com/talakolavijay" rel="noreferrer" target="_blank">
-          <FaXTwitter />
-        </a>
+        
     </div>
   )
 }
