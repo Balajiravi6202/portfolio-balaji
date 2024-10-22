@@ -8,7 +8,7 @@ const Contact = () => {
   const formRef = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm( "service_9inzcz7", "template_lg8ahdf", formRef.current, "_8hE7B_7PzOSTxPxm" )
+    emailjs.sendForm( "service_1adi29j", "template_9m33n8g", formRef.current, "6c2qTKmRPIN8KB2O6" )
       .then(
         (result) => {
           toast.success("Message sent successfully");
