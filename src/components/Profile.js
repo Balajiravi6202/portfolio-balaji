@@ -1,10 +1,25 @@
-import React from "react";
+import React , {useState}from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 import SocialHandles from "./SocialHandles";
 
 
 const Profile = () => {
+
+  const [transform, setTransform] = useState('scale(1) translate(0, 0)');
+
+  const handleMouseMove = (e) => {
+    const x = e.clientX / window.innerWidth - 0.8; // Normalize to range -0.5 to 0.5
+    const y = e.clientY / window.innerHeight - 0.8; // Normalize to range -0.5 to 0.5
+
+    // Set the transform style dynamically based on mouse position
+    setTransform(`scale(1.1) translate(${x * 30}px, ${y * 30}px)`); // 30px is the max movement
+  };
+
+  const handleMouseLeave = () => {
+    // Reset transform on mouse leave
+    setTransform('scale(1) translate(0, 0)');
+  };
 
   const handleDownload = () => {
  
@@ -27,11 +42,25 @@ const Profile = () => {
           data-aos-once="false"
           className="w-5/6 sm:max-w-xs md:max-w-sm lg:max-w-md sm:w-2/6 lg:mr-10 xl:mr-20 lg:p-5 lg:w-1/3 xl:w-1/4 "
         >
-          <img
-            className="object-cover object-center bg-[#b9aeb6] border-2 border-white pointer-events-none rounded-full backdrop-contrast-200 backdrop-brightness-200"
-            alt="Balaji"
-            src={require("../assets/Images/hero.png")}
-          />
+           
+   
+      <div className="absolute -inset-0.5 w-100 h-100 md:w-100 md:h-100 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 blur-lg opacity-70 animate-pulse"></div>
+
+      <div
+      className="relative"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <img
+        className="object-cover object-center bg-[#b9aeb6] border-2 border-white pointer-events-none rounded-full backdrop-contrast-200 backdrop-brightness-200 transition-all duration-300"
+        alt="Balaji"
+        src={require("../assets/Images/hero.png")}
+        style={{
+          transform: transform, // Apply dynamic transform
+          transition: 'transform 0.2s ease-out', // Smooth transition
+        }}
+      />
+    </div>
         </div>
         <div className="lg:flex-grow lg:pr-4 lg:mr-14 flex flex-col md:mb-0 items-center text-center xl:scale-105">
           <SocialHandles />
