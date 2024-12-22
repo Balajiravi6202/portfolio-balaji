@@ -5,7 +5,8 @@ import Profile from '../components/Profile'
 const Home = () => {
   return (
     // <div id='home' className='bg-darkblue'>
-      <div id='home' className='bg-gradient-to-tr from-blue-700 via-violet-800 to-fuchsia-900'>
+    
+      <div id='home' className='bg-gradient-to-r from-gray-800 via-blue-700 to-gray-900'>
         <Navbar/>
         <Profile/>
     </div>

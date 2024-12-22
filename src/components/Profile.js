@@ -1,4 +1,4 @@
-import React , {useState}from "react";
+import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { Link } from "react-scroll";
 import SocialHandles from "./SocialHandles";
@@ -6,21 +6,7 @@ import SocialHandles from "./SocialHandles";
 
 const Profile = () => {
 
-  const [transform, setTransform] = useState('scale(1) translate(0, 0)');
-
-  const handleMouseMove = (e) => {
-    const x = e.clientX / window.innerWidth - 0.8; // Normalize to range -0.5 to 0.5
-    const y = e.clientY / window.innerHeight - 0.8; // Normalize to range -0.5 to 0.5
-
-    // Set the transform style dynamically based on mouse position
-    setTransform(`scale(1.1) translate(${x * 30}px, ${y * 30}px)`); // 30px is the max movement
-  };
-
-  const handleMouseLeave = () => {
-    // Reset transform on mouse leave
-    setTransform('scale(1) translate(0, 0)');
-  };
-
+  
   const handleDownload = () => {
  
     const pdfUrl = './BALAJI RESUME.pdf ';
@@ -47,18 +33,12 @@ const Profile = () => {
       <div className="absolute -inset-0.5 w-100 h-100 md:w-100 md:h-100 rounded-full bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 blur-lg opacity-70 animate-pulse"></div>
 
       <div
-      className="relative"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+     
     >
       <img
         className="object-cover object-center bg-[#b9aeb6] border-2 border-white pointer-events-none rounded-full backdrop-contrast-200 backdrop-brightness-200 transition-all duration-300"
         alt="Balaji"
         src={require("../assets/Images/hero.png")}
-        style={{
-          transform: transform, // Apply dynamic transform
-          transition: 'transform 0.2s ease-out', // Smooth transition
-        }}
       />
     </div>
         </div>
